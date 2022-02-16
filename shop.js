@@ -24,6 +24,32 @@ document.getElementById('minus-phone').addEventListener('click', function(){
     phoneTotal.innerText = phoneNumber * 1219
     totalcalculat()
 })
+//  CASE 
+document.getElementById('plus-case').addEventListener('click', function(){
+    const caseInput = document.getElementById('case-number')
+    let caseNumber = parseInt(caseInput.value)
+    caseNumber = caseNumber + 1
+    caseInput.value = caseNumber
+
+    const caseTotal =  document.getElementById('case-total')
+    const casePrice = parseInt(caseTotal.innerText)
+    caseTotal.innerText = caseNumber * 59
+    totalcalculat()
+})
+document.getElementById('minus-case').addEventListener('click', function(){
+    const caseInput = document.getElementById('case-number')
+    let caseNumber = parseInt(caseInput.value)
+    if(caseNumber > 0 ){
+        caseNumber = caseNumber - 1
+    }
+    caseInput.value = caseNumber
+
+    const caseTotal =  document.getElementById('case-total')
+    const casePrice = parseInt(caseTotal.innerText)
+    caseTotal.innerText = caseNumber * 59
+    totalcalculat()
+})
+
 
     
 
