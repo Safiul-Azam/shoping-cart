@@ -50,7 +50,24 @@ document.getElementById('minus-case').addEventListener('click', function(){
     totalcalculat()
 })
 
+function totalcalculat(){
+    const phoneInput = document.getElementById('phone-number')
+    const phoneNumber = parseInt(phoneInput.value)
+    const phoneTotal = phoneNumber * 1219;
 
+    const caseInput = document.getElementById('case-number')
+    const caseNumber = parseInt(caseInput.value)
+    const caseTotal = caseNumber * 59;
+
+    const sub = phoneTotal + caseTotal
+    console.log(sub)
+    const tex = sub / 10
+    const total = sub + tex
+
+    const subTotal = document.getElementById('sub-total').innerText = sub
+    const texAmount = document.getElementById('tax-amount').innerText = tex
+    const totalPrice = document.getElementById('total-price').innerText = total
+}
     
 
     
