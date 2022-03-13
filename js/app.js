@@ -45,3 +45,25 @@ document.getElementById('plus-case').addEventListener('click', function(){
 document.getElementById('minus-case').addEventListener('click', function(){
     getUpdate('case',59, false)
 })
+    
+const checkOut = ()=>{
+    const phoneInput = document.getElementById('phone-number')
+    const phoneNumber = parseInt(phoneInput.value) 
+    const caseInput = document.getElementById('case-number')
+    const caseNumber = parseInt(caseInput.value)
+    const totalProduct = phoneNumber + caseNumber
+    const modalBody = document.getElementById('modal-body')
+     const sub = document.getElementById('sub-total').innerText
+     const tex = document.getElementById('tax-amount').innerText
+    const total = document.getElementById('total-price').innerText
+    modalBody.innerHTML=`
+         <h6>Phone's Count - ${phoneNumber}</h6>
+         <h6>Case's Count - ${caseNumber}</h6>
+         <h6>Total Product - ${totalProduct}</h6>
+         <h6>Subtotal: - ${sub}</h6>
+         <h6>Tex: - ${tex}</h6>
+         <h6>Total: - ${total}</h6>
+    
+    `
+    
+}

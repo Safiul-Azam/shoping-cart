@@ -60,7 +60,6 @@ function totalcalculat(){
     const caseTotal = caseNumber * 59;
 
     const sub = phoneTotal + caseTotal
-    console.log(sub)
     const tex = sub / 10
     const total = sub + tex
 
@@ -69,6 +68,27 @@ function totalcalculat(){
     document.getElementById('total-price').innerText = total
 }
     
+const checkOut = ()=>{
+    const phoneInput = document.getElementById('phone-number')
+    const phoneNumber = parseInt(phoneInput.value) 
+    const caseInput = document.getElementById('case-number')
+    const caseNumber = parseInt(caseInput.value)
+    const totalProduct = phoneNumber + caseNumber
+    const modalBody = document.getElementById('modal-body')
+     const sub = document.getElementById('sub-total').innerText
+     const tex = document.getElementById('tax-amount').innerText
+    const total = document.getElementById('total-price').innerText
+    modalBody.innerHTML=`
+         <h6>Phone's Count - ${phoneNumber}</h6>
+         <h6>Case's Count - ${caseNumber}</h6>
+         <h6>Total Product - ${totalProduct}</h6>
+         <h6>Subtotal: - ${sub}</h6>
+         <h6>Tex: - ${tex}</h6>
+         <h6>Total: - ${total}</h6>
+    
+    `
+    
+}
 
     
  
