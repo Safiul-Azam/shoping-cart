@@ -64,9 +64,9 @@ function totalcalculat(){
     const tex = sub / 10
     const total = sub + tex
 
-    const subTotal = document.getElementById('sub-total').innerText = sub
-    const texAmount = document.getElementById('tax-amount').innerText = tex
-    const totalPrice = document.getElementById('total-price').innerText = total
+    document.getElementById('sub-total').innerText = sub
+    document.getElementById('tax-amount').innerText = tex
+    document.getElementById('total-price').innerText = total
 }
     
 
